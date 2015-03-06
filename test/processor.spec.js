@@ -1,9 +1,8 @@
 'use strict';
 
 var expect = require('chai').expect,
-  processor = require('../lib/processor.js'),
-  _ = require('lodash');
-
+  processor = require('../lib/processor.js');
+  
 describe('Processor', function(){
   var testData = {
     'oneLink': {
