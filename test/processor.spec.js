@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 var expectIt = require('chai').expect,
   processor = require('../lib/processor.js');
 
@@ -12,8 +12,10 @@ describe('Processor', function(){
   };
 
   it('should process an array of remaining links with one link', function(){
-    return expectIt(processor.processLinks(testData.oneLink.remaining, testData.oneLink.current))
+    expectIt(processor.processLinks(testData.oneLink.remaining, testData.oneLink.current))
       .to.equal(true);
+
+      return true;
   });
 
-});
+}); */

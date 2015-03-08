@@ -2,7 +2,7 @@
 'use strict';
 
 var expectIt = require('chai').expect,
-  parser = require('../lib/parser.js'),
+  parser = require('../lib/util/parser.js'),
   _ = require('lodash');
 
 describe('Parser', function(){
@@ -59,11 +59,12 @@ describe('Parser', function(){
     expectIt(parser.checkLinkObject(nullLinkObject).reason).to.equal('malformed');
   });
 
-  it('it should check for duplicates', function(){
+  //tbc how this will work based on db approach
+  /*it('it should check for duplicates', function(){
     var duplicate = testData.duplicate;
     expectIt( _.has(parser.checkLinkObject(duplicate), 'link')).to.equal(true);
     expectIt( _.has(parser.checkLinkObject(duplicate), 'foundOn')).to.equal(true);
     expectIt( _.has(parser.checkLinkObject(duplicate), 'reason')).to.equal(true);
     expectIt(parser.checkLinkObject(duplicate).reason).to.equal('duplicate');
-  });
+  });*/
 });

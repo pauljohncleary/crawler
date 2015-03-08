@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 
     nodemon: {
       dev: {
-        script: 'api.js',
+        script: 'server.js',
         options: {
           args: [],
           ext: 'js',

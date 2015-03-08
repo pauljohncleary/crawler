@@ -1,7 +1,7 @@
 'use strict';
 
 var expectIt = require('chai').expect,
-  pinger = require('../lib/pinger.js'),
+  pinger = require('../lib/util/pinger.js'),
   _ = require('lodash');
 
 describe('Pinger', function(){
