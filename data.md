@@ -10,5 +10,5 @@
 
 ### 2. Links
 |LinkID|CrawlID|URL|StatusCode|ResponseTime|Type|Timestamp|FoundOn|Duplicate|
-|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|
 |x|x|URL String|xxx|x ms|link / resource / file|DateTime|LinkID|Boolean|
