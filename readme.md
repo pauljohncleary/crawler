@@ -38,7 +38,7 @@ and returns an ID of the crawl
     url: String,
     links: [{
       url: String,
-      status: StatusCode,
+      statusCode: StatusCode,
       responseTime: 100ms,
       type: link || resource || file
       ...
@@ -48,5 +48,14 @@ and returns an ID of the crawl
   },
   ...
   ]
+}
+```
+
+## Internal concepts
+A ```linkObject``` is used when passing links between internal functions
+```javascript
+{
+  link: String,
+  foundOn: String
 }
 ```
