@@ -1,19 +1,22 @@
+#!/usr/bin/env node
 'use strict';
 
+var debug = require('debug')('crawler');
 var express = require('express');
-var bodyParser = require('body-parser');
 var app = express();
+var bodyParser = require('body-parser');
+
+app.set('port', process.env.PORT || 5001);
+
+var server = app.listen(app.get('port'), function() {
+  debug('The crawler is listening on port ' + server.address().port);
+});
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 
 app.all('/crawl', function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'X-Requested-With');
-  next();
-});
-
-app.all('/crawl/:id', function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'X-Requested-With');
   next();

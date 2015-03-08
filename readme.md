@@ -14,3 +14,39 @@
 - Takes a link it is called with and accesses it using selenium (or another browser) to obtain the links on the page
 - It executes any JS on the link in a browser and the parses the HTML for links (including resources in the <head> and images/files)
 - This array of links is provided back to the processor
+
+
+## API Spec
+```
+/crawl/[:id] {POST, GET}
+```
+```POST /crawl``` requires a json payload in the format:
+```javascript
+{
+  url: String
+}
+```
+and returns an ID of the crawl
+
+```GET /crawl/id``` returns the crawl in JSON format. This will only return if the logged in user owns the crawl
+```javascript
+{
+  start: Time,
+  end: Time,
+  url: String,
+  crawled: [{
+    url: String,
+    links: [{
+      url: String,
+      status: StatusCode,
+      responseTime: 100ms,
+      type: link || resource || file
+      ...
+    },
+    ...
+    ]
+  },
+  ...
+  ]
+}
+```
