@@ -5,8 +5,8 @@ var expectIt = require('chai').expect,
 
 describe('Saver', function(){
 
-  it('should connect to the database successfully', function(){
-    return saver.testConnection().then(function(data) {
+  it('should be rewritten to do something valuable', function(){
+    return saver.saveLink().then(function(data) {
       expectIt(data).to.exist();
     });
   });
