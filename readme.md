@@ -3,7 +3,11 @@
 ## State Flow
 ### API
 - Crawls are received through the server.js api.
-- A single url is provided to the processor
+- A single url is provided to the crawl controller
+
+### The Crawl Controller
+- Starts crawls, ends crawls, gets the status of crawls (etc)
+- Calls the processor
 
 ### The Processor
 - Controls the flow of getting links, making sure there are links to crawl etc.

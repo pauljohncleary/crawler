@@ -2,7 +2,7 @@
 'use strict';
 
 var expectIt = require('chai').expect,
-  parser = require('../lib/util/parser.js'),
+  parser = require('../../lib/util/parser.js'),
   _ = require('lodash');
 
 describe('Parser', function(){

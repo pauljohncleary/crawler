@@ -1,7 +1,7 @@
 'use strict';
 
 var expectIt = require('chai').expect,
-  saver = require('../lib/util/saver.js');
+  saver = require('../../lib/util/saver.js');
 
 describe('Saver', function(){
 
