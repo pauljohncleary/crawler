@@ -20,13 +20,13 @@
     "pg": "^4.3.0",
     "q": "^1.0.1",
     "request-promise": "~0.4.0",
-    "valid-url": "^1.0.9"
+    "valid-url": "^1.0.9",
+    "pg-promise": "^0.5.4"
   },
   "devDependencies": {
     "chai": "^1.10.0",
     "grunt-mocha-test": "^0.12.6",
     "mocha": "^2.1.0",
-    "mocha-traceur": "^2.1.0",
-    "pg-promise": "^0.5.4"
+    "mocha-traceur": "^2.1.0"
   }
 }
