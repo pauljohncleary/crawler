@@ -8,7 +8,7 @@ module.exports = function (grunt) {
     watch: {
       js: {
         files: ['*.js', 'test/**/*.js', 'lib/**/*.js'],
-        tasks: ['jshint:all', 'mochaTest'],
+        tasks: ['jshint:all', 'mochaTest', 'mocha_istanbul'],
         options: {
           livereload: false
         }
@@ -50,11 +50,20 @@ module.exports = function (grunt) {
         },
         src: ['test/**/*.spec.js']
       }
+    },
+
+    mocha_istanbul: {
+      coverage: {
+        src: 'test',
+        options: {
+            mask: '*.spec.js'
+        }
+      }
     }
 
   });
 
   grunt.registerTask('build', ['jshint']);
-  grunt.registerTask('default', ['jshint', 'mochaTest', 'concurrent']);
+  grunt.registerTask('default', ['jshint', 'mochaTest', 'mocha_istanbul', 'concurrent']);
 
 };
