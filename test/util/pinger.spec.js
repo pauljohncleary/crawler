@@ -1,6 +1,6 @@
 'use strict';
 
-var expectIt = require('chai').expect,
+var expect = require('chai').expect,
   pinger = require('../../lib/util/pinger.js'),
   _ = require('lodash');
 
@@ -14,8 +14,8 @@ describe('Pinger', function(){
 
   it('it should return a status code and response time', function(){
     return pinger.ping(testData.working).then(function(linkObject) {
-      expectIt( _.has(linkObject, 'statusCode')).to.equal(true);
-      expectIt( _.has(linkObject, 'responseTime')).to.equal(true);
+      expect( _.has(linkObject, 'statusCode')).to.equal(true);
+      expect( _.has(linkObject, 'responseTime')).to.equal(true);
     });
   });
 
