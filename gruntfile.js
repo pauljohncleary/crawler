@@ -7,7 +7,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     watch: {
       js: {
-        files: ['*.js', 'test/**/*.js', 'lib/**/*.js'],
+        files: ['*.js', 'test/**/*.js', 'lib/**/*.js', 'config/**/*.js'],
         tasks: ['jshint:all', 'mochaTest', 'mocha_istanbul'],
         options: {
           livereload: false
@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 
     nodemon: {
       dev: {
-        script: 'server.js',
+        script: 'app.js',
         options: {
           args: [],
           ext: 'js',
@@ -39,14 +39,13 @@ module.exports = function (grunt) {
       options: {
         jshintrc: '.jshintrc'
       },
-      all: ['*.js', 'test/**/*.js', 'lib/**/*.js']
+      all: ['*.js', 'test/**/*.js', 'api/**/*.js', 'config/**/*.js']
     },
 
     mochaTest: {
       test: {
         options: {
-          reporter: 'spec',
-          require: 'mocha-traceur'
+          reporter: 'spec'
         },
         src: ['test/**/*.spec.js']
       }
